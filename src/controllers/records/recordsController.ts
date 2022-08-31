@@ -12,8 +12,12 @@ export async function recordsController(req: Request, res: Response) {
       team: 'texas',
     },
   };
-
-  const response = await axios.get(`${apiUrl}/records`, requestConfig);
+  let response: any;
+  try {
+    response = await axios.get(`${apiUrl}/records`, requestConfig);
+  } catch (error) {
+    console.log(error);
+  }
 
   res.status(200).json({
     result: response.data,
