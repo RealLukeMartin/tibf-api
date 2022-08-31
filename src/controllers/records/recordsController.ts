@@ -17,6 +17,7 @@ export async function recordsController(req: Request, res: Response) {
     response = await axios.get(`${apiUrl}/records`, requestConfig);
   } catch (error) {
     console.log(error);
+    throw new Error(String(error));
   }
 
   res.status(200).json({
