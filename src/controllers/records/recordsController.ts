@@ -20,9 +20,9 @@ export async function recordsController(req: Request, res: Response) {
     throw new Error(String(error));
   }
 
-  res.status(200).json({
-    result: response.data,
-  });
+  res.status(200).json(
+    response.data
+  );
 
   return res;
 }
