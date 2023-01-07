@@ -1,6 +1,6 @@
-# fly.toml file generated for tibf-api on 2022-12-27T15:05:32-06:00
+# fly.toml file generated for tibfapi on 2023-01-07T13:23:23-06:00
 
-app = "tibf-api"
+app = "tibfapi"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
